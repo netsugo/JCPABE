@@ -1,20 +1,18 @@
 plugins {
-    id 'maven'
     id 'java'
-    id 'ca.coglinc.javacc' version '2.3.1'
+    id 'ca.coglinc.javacc' version '2.4.0'
     id 'com.github.ben-manes.versions' version '0.11.3'
 }
 
 repositories {
+    maven { url 'https://www.jitpack.io' }
     mavenCentral()
     mavenLocal()
 }
 
 dependencies {
-    compile 'it.unisa.dia.gas:jpbc-api:2.0.0'
-    compile 'it.unisa.dia.gas:jpbc-plaf:2.0.0'
-    compile 'it.unisa.dia.gas:jpbc-pbc:2.0.0'
-    testCompile 'junit:junit:4.12'
+    implementation 'com.github.emilianobonassi:jpbc:2.0.0'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 group = "snet.abe"
